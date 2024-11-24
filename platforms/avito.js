@@ -53,11 +53,11 @@ module.exports = {
                 console.error('Ошибка:', error.message);
             }
 
-            //await compressImages(releasePath);
+            // await compressImages(releasePath);
             await replaceImagesWithBase64(releasePath);
             // await minifyJSFiles(releasePath);
             inlineJavaScript(releasePath);
-            await deleteFiles(releasePath, ['index.js', 'index_atlas_P_1.png', 'index_atlas_NP_1.jpg', '*.fla']);
+            // await deleteFiles(releasePath, ['index.js', 'index_atlas_P_1.png', 'index_atlas_NP_1.jpg', '*.fla']);
             await archiveFolder(releasePath);
         }
     }
