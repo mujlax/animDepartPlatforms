@@ -53,7 +53,7 @@ module.exports = {
                 console.error('Ошибка:', error.message);
             }
 
-            await compressImages(releasePath);
+            //await compressImages(releasePath);
             await replaceImagesWithBase64(releasePath);
             // await minifyJSFiles(releasePath);
             inlineJavaScript(releasePath);
