@@ -12,7 +12,9 @@ const { minifyJSFiles,
     insertScriptAfterMarker, 
     wrapDiv,
     prepareReleaseFolder,
-    checkRequestLink
+    checkRequestLink,
+    downloadAndReplaceScript,
+    getCanvasSize
 } = require('../bannerUtils');
 
 module.exports = {
@@ -22,8 +24,7 @@ module.exports = {
 
         for (const folderPath of paths) {
             const releasePath = await prepareReleaseFolder(folderPath);
-            const sizeMatch = releasePath.match(/(\d+)x(\d+)/);
-            const [_, width, height] = sizeMatch || [null, '0', '0'];
+            const { width, height } = getCanvasSize(releasePath);
 
             console.log(`Обрабатываем папку: ${folderPath}`);
             console.log(`Папка скопирована в ${releasePath}`);
