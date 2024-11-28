@@ -48,7 +48,7 @@ module.exports = {
             await compressImages(releasePath);
             // await replaceImagesWithBase64(releasePath);
             await minifyJSFiles(releasePath);
-            // bannerUtils.inlineJavaScript(releasePath);
+            // inlineJavaScript(releasePath);
             await deleteFiles(releasePath, ['*.fla']);
             await archiveFolder(releasePath);
         }
