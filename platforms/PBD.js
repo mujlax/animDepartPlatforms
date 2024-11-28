@@ -71,6 +71,11 @@ module.exports = {
                 true
             );
 
+            await insertScriptAfterMarker(releasePath,
+                '<body onload="init();" style="margin:0px;">',
+                `<body onload="initEB();">`,
+                true
+            );
 
             try {
                 await wrapDiv(releasePath, 'animation_container', `<a href="%banner.reference_mrc_user1%" target="%banner.target%">`);
