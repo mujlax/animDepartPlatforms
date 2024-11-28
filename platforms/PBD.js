@@ -67,7 +67,8 @@ module.exports = {
                  }
                  if(isLocal()){
                     console.log(' -- Sizmek, 2018-10-12 -- ');
-                 }`, 
+                 }
+                var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;`, 
                 true
             );
 
