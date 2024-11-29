@@ -35,7 +35,7 @@ module.exports = {
 
 
             try {
-                await wrapDiv(releasePath, 'animation_container', `<a href="%banner.reference_mrc_user1%" target="%banner.target%">`);
+                await wrapDiv(releasePath, 'banner', `<a href="%banner.reference_mrc_user1%" target="%banner.target%">`);
                 console.log('Div успешно обёрнут.');
             } catch (error) {
                 console.error('Ошибка:', error.message);
