@@ -30,7 +30,7 @@ module.exports = {
 
             await insertScriptAfterMarker(releasePath,
                 '<meta charset="UTF-8">',
-                `<meta name="ad.size" content="width=${width},height=${height}">`
+                `<meta name="ad.size" content="width=100%,height=${height}">`
             );
 
 
