@@ -15,7 +15,7 @@ const {
 } = require('../bannerUtils');
 
 module.exports = {
-    name: 'RBC_100prc',
+    name: 'RBC_100prc2',
     process: async (paths, userLink, platformWindow) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
