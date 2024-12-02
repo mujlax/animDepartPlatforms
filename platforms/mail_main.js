@@ -16,7 +16,7 @@ const {
 } = require('../bannerUtils');
 
 module.exports = {
-    name: 'mail_Main_gifs2',
+    name: 'mail_Main',
     process: async (paths, userLink, platformWindow, gifSettings) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
