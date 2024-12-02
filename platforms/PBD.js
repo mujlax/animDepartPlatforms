@@ -11,12 +11,15 @@ const {
     inlineJavaScript,
     deleteFiles,
     archiveFolder,
-    downloadAndReplaceScript
+    downloadAndReplaceScript,
+    createScreenshotWithTrigger,
+    generateGif,
+    deleteAllExceptImg
 } = require('../bannerUtils');
 
 module.exports = {
     name: 'PBD',
-    process: async (paths, userLink, platformWindow) => {
+    process: async (paths, userLink, platformWindow, gifSettings) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
         for (const folderPath of paths) {
@@ -47,7 +50,7 @@ module.exports = {
           await insertScriptAfterMarker(releasePath,
                 'var canvas, stage, exportRoot, anim_container, dom_overlay_container, fnStartAnimation;',
                 `function isLocal(){
-                   return /(sizmek\.ru|file\:\/\/\/|localhost|192\.168\.|127\.0\.0\.1)/.test(window.location.href);
+                   return \`(sizmek.ru|file:///|localhost|192.168.|127.0.0.1)/.test(\${window.location.href});\`
                  }
                  function clickthrough1(){
                     EB.clickthrough();
@@ -91,6 +94,8 @@ module.exports = {
             //inlineJavaScript(releasePath);
             await deleteFiles(releasePath, ['*.fla']);
             await archiveFolder(releasePath);
+
+            await createScreenshotWithTrigger(paths, true, gifSettings);
         }
     }
 };
