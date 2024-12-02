@@ -16,7 +16,7 @@ const {
 } = require('../bannerUtils');
 
 module.exports = {
-    name: 'mail_Main_gifs',
+    name: 'mail_Main_gifs2',
     process: async (paths, userLink, platformWindow, gifSettings) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
@@ -50,7 +50,7 @@ module.exports = {
             // await replaceImagesWithBase64(releasePath);
             await minifyJSFiles(releasePath);
             // bannerUtils.inlineJavaScript(releasePath);
-            await createScreenshotWithTriggerAdaptive(paths, true, gifSettings, '400')
+            await createScreenshotWithTriggerAdaptive(folderPath, true, gifSettings, '400')
             await deleteFiles(releasePath, ['*.fla']);
             await archiveFolder(releasePath);
         }
