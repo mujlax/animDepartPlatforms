@@ -16,7 +16,7 @@ const {
 } = require('../bannerUtils');
 
 module.exports = {
-    name: 'dzen_gif_940',
+    name: 'dzen_gif_9402',
     process: async (paths, userLink, platformWindow, gifSettings) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
@@ -52,7 +52,7 @@ module.exports = {
             // inlineJavaScript(releasePath);
             await deleteFiles(releasePath, ['*.fla']);
             await archiveFolder(releasePath);
-            await createScreenshotWithTriggerAdaptive(folderPath, true, gifSettings, '940');
+            await createScreenshotWithTriggerAdaptive(folderPath, true, gifSettings, '700');
         }
     }
 };
