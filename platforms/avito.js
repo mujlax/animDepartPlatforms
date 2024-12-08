@@ -12,7 +12,7 @@ const {
     deleteFiles,
     archiveFolder,
     downloadAndReplaceScript
-} = require('../bannerUtils');
+} = require('./utils/bannerUtils');
 
 module.exports = {
     name: 'АвитоНаАвито',

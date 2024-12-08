@@ -15,7 +15,7 @@ const {
     createScreenshotWithTrigger,
     generateGif,
     deleteAllExceptImg
-} = require('../bannerUtils');
+} = require('./utils/bannerUtils');
 
 module.exports = {
     name: 'PBD',
