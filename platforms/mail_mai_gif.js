@@ -12,12 +12,12 @@ const {
     deleteFiles,
     archiveFolder,
     downloadAndReplaceScript,
-    createScreenshotWithTriggerAdaptive
+    createScreenshotWithTrigger
 } = require('./utils/bannerUtils');
 
 module.exports = {
     name: 'mail_main_gif',
-    process: async (paths, userLink, platformWindow, gifSettings) => {
+    process: async (paths, userLink, platformWindow, platformSettings) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
         for (const folderPath of paths) {
@@ -53,7 +53,7 @@ module.exports = {
             
             await deleteFiles(releasePath, ['*.fla']);
             await archiveFolder(releasePath);
-            await createScreenshotWithTriggerAdaptive(folderPath, true, gifSettings, '400');
+            await createScreenshotWithTrigger(folderPath, platformSettings);
         }
     }
 };

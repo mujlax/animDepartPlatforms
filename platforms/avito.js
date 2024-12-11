@@ -1,4 +1,4 @@
-//vsmisle
+
 const { 
     checkRequestLink,
     prepareReleaseFolder,

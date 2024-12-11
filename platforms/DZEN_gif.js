@@ -16,8 +16,8 @@ const {
 } = require('./utils/bannerUtils');
 
 module.exports = {
-    name: 'mail_main',
-    process: async (paths, userLink, platformWindow, gifSettings) => {
+    name: 'dzen_gif_9420321',
+    process: async (paths, userLink, platformWindow, platformSettings) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
         for (const folderPath of paths) {
@@ -49,10 +49,10 @@ module.exports = {
             await compressImages(releasePath);
             // await replaceImagesWithBase64(releasePath);
             await minifyJSFiles(releasePath);
-            // bannerUtils.inlineJavaScript(releasePath);
-            //await createScreenshotWithTriggerAdaptive(folderPath, true, gifSettings, '400')
+            // inlineJavaScript(releasePath);
             await deleteFiles(releasePath, ['*.fla']);
             await archiveFolder(releasePath);
+            await createScreenshotWithTriggerAdaptive(releasePath, platformSettings);
         }
     }
 };
