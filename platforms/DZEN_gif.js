@@ -12,7 +12,7 @@ const {
     deleteFiles,
     archiveFolder,
     downloadAndReplaceScript,
-    createScreenshotWithTriggerAdaptive
+    createScreenshotWithTrigger
 } = require('./utils/bannerUtils');
 
 module.exports = {
@@ -52,7 +52,7 @@ module.exports = {
             // inlineJavaScript(releasePath);
             await deleteFiles(releasePath, ['*.fla']);
             await archiveFolder(releasePath);
-            await createScreenshotWithTriggerAdaptive(releasePath, platformSettings);
+            await createScreenshotWithTrigger(releasePath, platformSettings);
         }
     }
 };
