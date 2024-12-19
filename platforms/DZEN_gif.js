@@ -16,7 +16,7 @@ const {
 } = require('./utils/bannerUtils');
 
 module.exports = {
-    name: 'dzen_gif_9420321',
+    name: 'Dzen_100prc',
     process: async (paths, userLink, platformWindow, platformSettings) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
