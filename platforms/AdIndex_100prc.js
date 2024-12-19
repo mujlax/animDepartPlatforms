@@ -15,7 +15,7 @@ const {
 } = require('./utils/bannerUtils');
 
 module.exports = {
-    name: 'AdIndex',
+    name: 'AdIndex_100prc',
     process: async (paths, userLink, platformWindow) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
