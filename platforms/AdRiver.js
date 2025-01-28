@@ -15,7 +15,7 @@ const {
 } = require('./utils/bannerUtils');
 
 module.exports = {
-    name: 'AdRiver(тестировать6)',
+    name: 'AdRiver(тестировать)',
     process: 
         
         async (paths, userLink, platformWindow) => {
