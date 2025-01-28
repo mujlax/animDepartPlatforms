@@ -50,7 +50,7 @@ module.exports = {
            
 
             try {
-                await wrapDiv(releasePath, 'canvas', `<a href="javascript:window.open(window.clickTag)">`);
+                await wrapDiv(releasePath, 'animation_container', `<a href="javascript:window.open(window.clickTag)">`);
                 console.log('Div успешно обёрнут.');
             } catch (error) {
                 console.error('Ошибка:', error.message);
