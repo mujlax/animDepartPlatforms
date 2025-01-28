@@ -15,16 +15,16 @@ const {
 } = require('./utils/bannerUtils');
 
 module.exports = {
-    name: 'AdRiver(тестировать4)',
+    name: 'AdRiver(тестировать5)',
     process: 
+        
+        async (paths, userLink, platformWindow) => {
+        userLink = await checkRequestLink(requestLink = true, userLink, platformWindow);
         let userLink2 = '2';
         async (paths, userLink, platformWindow) => {
         userLink2 = await checkRequestLink(requestLink = true, userLink, platformWindow);
         
         }
-        async (paths, userLink, platformWindow) => {
-        userLink = await checkRequestLink(requestLink = true, userLink, platformWindow);
-        
 
         for (const folderPath of paths) {
             const releasePath = await prepareReleaseFolder(folderPath);
