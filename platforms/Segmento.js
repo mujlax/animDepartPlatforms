@@ -33,7 +33,7 @@ module.exports = {
             );
 
           await insertScriptAfterMarker(releasePath,
-                '<title>index</title>',
+                '<body onload="init();" style="margin:0px;">',
                 `<script>var clickTag = "http://www.google.com";</script>`
             );
 
