@@ -15,7 +15,7 @@ const {
 } = require('./utils/bannerUtils');
 
 module.exports = {
-    name: 'OTM',
+    name: 'OTM_2',
     process: async (paths, userLink, platformWindow) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
