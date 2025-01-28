@@ -15,8 +15,14 @@ const {
 } = require('./utils/bannerUtils');
 
 module.exports = {
-    name: 'AdRiver(тестировать2)',
-    process: async (paths, userLink, platformWindow) => {
+    name: 'AdRiver(тестировать3)',
+    process: 
+        let userLink2 = '2';
+        async (paths, userLink, platformWindow) => {
+        userLink2 = await checkRequestLink(requestLink = true, userLink, platformWindow);
+        
+        }
+        async (paths, userLink, platformWindow) => {
         userLink = await checkRequestLink(requestLink = true, userLink, platformWindow);
         
 
@@ -35,7 +41,7 @@ module.exports = {
 
             await insertScriptAfterMarker(releasePath,
                 '<body onload="init();" style="margin:0px;">',
-                `<script type="text/javascript" data-placement="" data-pixel="${userLink}" src="${userLink}"></script>`,
+                `<script type="text/javascript" data-placement="" data-pixel="${userLink}" src="${userLink2}"></script>`,
             );
 
             // try {
@@ -53,6 +59,8 @@ module.exports = {
             await archiveFolder(releasePath);
         }
 
-        userLink2 = await checkRequestLink(requestLink = true, userLink, platformWindow);
+        
+
+        
     }
 };
