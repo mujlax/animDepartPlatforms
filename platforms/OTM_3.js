@@ -15,7 +15,7 @@ const {
 } = require('./utils/bannerUtils');
 
 module.exports = {
-    name: 'OTM_3',
+    name: 'OTM',
     process: async (paths, userLink, platformWindow) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
@@ -42,12 +42,6 @@ module.exports = {
                 '<title>index</title>',
                 `<script type="text/javascript">var clickTag = "";</script>`
             );
-
-         
-
-         
-
-           
 
             try {
                 await wrapDiv(releasePath, 'animation_container', `<a href="javascript:window.open(window.clickTag)">`);
