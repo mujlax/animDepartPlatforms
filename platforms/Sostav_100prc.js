@@ -33,7 +33,7 @@ module.exports = {
                 `<meta name="ad.size" content="width=100%,height=${height}">`
             );
           
-            await downloadAndReplaceScript(releasePath);
+            //await downloadAndReplaceScript(releasePath);
 
             try {
                 await wrapDiv(releasePath, 'banner', `<a href="%banner.reference_mrc_user1%" target="%banner.target%">`);
