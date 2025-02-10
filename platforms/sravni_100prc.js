@@ -45,6 +45,12 @@ module.exports = {
                 true
             );
 
+		await insertScriptAfterMarker(releasePath,
+                '<script src="index.js"></script>',
+                `<script nonce="%request.eid1%" src="index.js"></script>`,
+                true
+            );
+
            await insertScriptAfterMarker(releasePath,
                 '</head>',
                 `<style type="text/css">
