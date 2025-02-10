@@ -90,8 +90,7 @@ module.exports = {
 		z-index: 10;
 		background: #000;
 	}
-</style>`,
-                true
+</style>`
             );
 
 
