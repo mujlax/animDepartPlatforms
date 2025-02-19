@@ -18,7 +18,7 @@ const {
 } = require('./utils/bannerUtils');
 
 module.exports = {
-    name: 'PBD (тестиоровать)',
+    name: 'PBD (тестировать)',
     process: async (paths, userLink, platformWindow, gifSettings) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
