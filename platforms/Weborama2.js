@@ -15,7 +15,7 @@ const {
 } = require('./utils/bannerUtils');
 
 module.exports = {
-    name: 'Weborama',
+    name: 'Weborama2',
     process: async (paths, userLink, platformWindow) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
