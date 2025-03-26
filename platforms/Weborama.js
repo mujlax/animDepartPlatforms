@@ -35,9 +35,9 @@ module.exports = {
 
           await insertScriptAfterMarker(releasePath,
                 '<title>index</title>',
-                `<script type="text/javascript" src="//media.adrcdn.com/scripts/screenad_interface_1.0.3_scrambled.js"></script>
+                `<script type="text/javascript" src="https://cstatic-ru-cv.weborama-tech.ru/public/js/advertiserv2/ru/screenad_interface_1.0.3_scrambled.js"></script>
 <!-- write your code here -->
-<!-- WEBORAMA SCREENAD META DATA (don't edit/remove) -->
+<!-- ADRIME SCREENAD META DATA (don't edit/remove) -->
 <!-- SCRVERSION: screenad_interface_1.0.3 -->
 <!-- SCRFORMAT: banner -->
 <!-- SCRWIDTH: ${width} -->
