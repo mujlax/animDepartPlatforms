@@ -15,7 +15,7 @@ const {
 } = require('./utils/bannerUtils');
 
 module.exports = {
-    name: 'Soloway',
+    name: 'Soloway_base64',
     process: async (paths, userLink, platformWindow) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
@@ -35,7 +35,7 @@ module.exports = {
 
            
             await compressImages(releasePath);
-            //await replaceImagesWithBase64(releasePath);
+            await replaceImagesWithBase64(releasePath);
             await minifyJSFiles(releasePath);
             //inlineJavaScript(releasePath);
             await deleteFiles(releasePath, ['*.fla']);
