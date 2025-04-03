@@ -116,7 +116,7 @@ function getSupportedSizes(releasePath, width, height) {
 
 
 module.exports = {
-    name: 'Soloway_NewScript',
+    name: 'Soloway',
     process: async (paths, userLink, platformWindow, platformSettings) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
