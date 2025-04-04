@@ -23,7 +23,8 @@ const {
     checkFpsInIndexJs,
     checkZipSize,
     runTestsForSize,
-    checkIndexHtmlSize
+    checkIndexHtmlSize,
+    checkClampMaxWidth
 } = require('./utils/bannerTests');
 
 
@@ -79,6 +80,7 @@ function getTestRules(releasePath, width, height) {
                 () => toggleCommentedBorders(releasePath, true),
                 () => checkLoopLimiter(releasePath, false),
                 //() => checkFpsInIndexJs(releasePath),
+                () => checkClampMaxWidth(releasePath),
 
                 // Optimize
 
