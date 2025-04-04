@@ -30,7 +30,7 @@ const {
 function getTestRules(releasePath, width, height) {
     return [
         {
-            sizes: ['0×0'
+            sizes: ['240x400', '300x250', '336x280', '728x90', '160x600', '300x600', '300x250', '336x280', '468x60', '320x50'
             ],
             tests: [
                 () => insertScriptAfterMarker(releasePath,
@@ -52,8 +52,8 @@ function getTestRules(releasePath, width, height) {
                     `<a href="javascript:window.open(window.clickTag)">`
                 ),
                 () => checkStandartTest(releasePath),
-                // () => toggleCommentedBorders(releasePath, true),
-                // () => checkLoopLimiter(releasePath, false),
+                () => toggleCommentedBorders(releasePath, true),
+                () => checkLoopLimiter(releasePath, true),
                 //() => checkFpsInIndexJs(releasePath),
                 //() => downloadAndReplaceScript(releasePath),
 
@@ -69,7 +69,7 @@ function getTestRules(releasePath, width, height) {
                 //() => inlineJavaScript(releasePath),
                 // () => checkIndexHtmlSize(releasePath, 150),
                 () => archiveFolder(releasePath),
-                // () => checkZipSize(releasePath, 512),
+                () => checkZipSize(releasePath, 150),
 
             ]
         },
@@ -96,8 +96,8 @@ function getTestRules(releasePath, width, height) {
                     `<a href="javascript:window.open(window.clickTag)">`
                 ),
                 () => checkStandartTest(releasePath),
-                // () => toggleCommentedBorders(releasePath, false),
-                // () => checkLoopLimiter(releasePath, false),
+                () => toggleCommentedBorders(releasePath, true),
+                () => checkLoopLimiter(releasePath, true),
                 //() => checkFpsInIndexJs(releasePath),
 
                 // Optimize
@@ -112,7 +112,7 @@ function getTestRules(releasePath, width, height) {
                 //() => inlineJavaScript(releasePath),
                 // () => checkIndexHtmlSize(releasePath, 150),
                 () => archiveFolder(releasePath),
-                // () => checkZipSize(releasePath, 512),
+                () => checkZipSize(releasePath, 150),
 
             ]
         }
@@ -136,7 +136,7 @@ function getSupportedSizes(releasePath, width, height) {
 
 
 module.exports = {
-    name: 'OTM_beeline (no test)',
+    name: 'OTM_beeline',
     process: async (paths, userLink, platformWindow, platformSettings) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
