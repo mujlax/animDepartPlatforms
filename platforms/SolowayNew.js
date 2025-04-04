@@ -50,7 +50,7 @@ function getTestRules(releasePath, width, height) {
                 // Optimize
 
                 () => compressImages(releasePath),
-                () => replaceImagesWithBase64(releasePath),
+                //() => replaceImagesWithBase64(releasePath),
                 () => minifyJSFiles(releasePath),
                 () => checkIndexJsSize(releasePath, maxSizeKB = 600),
 
@@ -83,7 +83,7 @@ function getTestRules(releasePath, width, height) {
                 // Optimize
 
                 () => compressImages(releasePath),
-                () => replaceImagesWithBase64(releasePath),
+                //() => replaceImagesWithBase64(releasePath),
                 () => minifyJSFiles(releasePath),
                 () => checkIndexJsSize(releasePath, maxSizeKB = 600),
 
