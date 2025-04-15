@@ -72,6 +72,49 @@ function getTestRules(releasePath, width, height, userLink) {
 
             ]
         },
+        {
+            // Правило для баннеров с высотой 200
+            height: [250],
+            tests: [
+                () => insertScriptAfterMarker(releasePath,
+                    '<meta charset="UTF-8">',
+                    `<meta name="ad.size" content="width=100%,height=100%">`
+                ),
+                () => insertScriptAfterMarker(releasePath,
+                    '<!-- write your code here -->',
+                    '<script type="text/javascript" src="https://tube.buzzoola.com/new/js/lib/banner.js"></script>'
+                ),
+                () => insertScriptAfterMarker(releasePath,
+                    '</body>',
+                    `<script type="text/javascript">buzzTrack('loaded');</script>\n</body>`,
+                    true
+                ),
+                () => wrapDiv(releasePath,
+                    'animation_container',
+                    `<div onclick="window.open('${userLink}'); buzzTrack('click');">`
+                ),
+                () => checkStandartTest(releasePath),
+                () => toggleCommentedBorders(releasePath, true),
+                () => checkLoopLimiter(releasePath, false),
+                //() => checkFpsInIndexJs(releasePath),
+                //() => downloadAndReplaceScript(releasePath),
+
+                // Optimize
+
+                () => compressImages(releasePath),
+                () => replaceImagesWithBase64(releasePath),
+                () => minifyJSFiles(releasePath),
+                //() => checkIndexJsSize(releasePath, maxSizeKB = 10),
+
+                //Optimize Desruct
+
+                () => inlineJavaScript(releasePath),
+                // () => checkIndexHtmlSize(releasePath, 500),
+                () => archiveFolder(releasePath),
+                () => checkZipSize(releasePath, 500),
+
+            ]
+        }
 
     ];
 }
