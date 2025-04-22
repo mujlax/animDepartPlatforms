@@ -116,7 +116,7 @@ function getSupportedSizes(releasePath, width, height) {
 
 
 module.exports = {
-    name: 'Hybrid (no test)',
+    name: 'Hybrid/Soloway/SalesInTheCity (no test)',
     process: async (paths, userLink, platformWindow, platformSettings) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
