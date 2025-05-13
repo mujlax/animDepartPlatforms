@@ -69,6 +69,45 @@ function getTestRules(releasePath, width, height) {
             ]
         },
         {
+            sizes: ['1456x180'
+            ],
+            tests: [
+                () => insertScriptAfterMarker(releasePath,
+                    '<meta charset="UTF-8">',
+                    `<meta name="ad.size" content="width=${width},height=${height}">`
+                ),
+                () => insertScriptAfterMarker(releasePath,
+                    '</body>',
+                    `<script>document.getElementById("click_area").href = yandexHTML5BannerApi.getClickURLNum(1);</script>\n</body>`,
+                    true
+                ),
+                () => wrapDiv(releasePath,
+                    'animation_container',
+                    `<a id="click_area" href="#" target="_blank">`
+                ),
+                () => checkStandartTest(releasePath),
+                () => toggleCommentedBorders(releasePath, false),
+                () => checkLoopLimiter(releasePath, false),
+                //() => checkFpsInIndexJs(releasePath),
+                //() => downloadAndReplaceScript(releasePath),
+
+                // Optimize
+
+                () => compressImages(releasePath),
+                //() => replaceImagesWithBase64(releasePath),
+                () => minifyJSFiles(releasePath),
+                //() => checkIndexJsSize(releasePath, maxSizeKB = 10),
+
+                //Optimize Desruct
+
+                //() => inlineJavaScript(releasePath),
+                () => checkIndexHtmlSize(releasePath, 150),
+                () => archiveFolder(releasePath),
+                () => checkZipSize(releasePath, 1024),
+
+            ]
+        },
+        {
             // Правило для баннеров с высотой 200
             height: [120, 150, 180, 250],
             tests: [
