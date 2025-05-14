@@ -38,7 +38,7 @@ function getTestRules(releasePath, width, height) {
                     `<meta name="ad.size" content="width=${width},height=${height}">`
                 ),
                 () => insertScriptAfterMarker(releasePath,
-                    '<body onload="init();" style="margin:0px; overflow: hidden; position: fixed;">',
+                    '<body onload="init();" style="margin:0px;">',
                     `<script>var clickTag = "http://www.google.com";</script>`
                 ),
                 () => wrapDiv(releasePath,
