@@ -43,7 +43,7 @@ function getTestRules(releasePath, width, height) {
                 // ),
                 () => checkStandartTest(releasePath),
                 () => toggleCommentedBorders(releasePath, true),
-                () => checkLoopLimiter(releasePath, false),
+                () => checkLoopLimiter(releasePath, true),
                 //() => checkFpsInIndexJs(releasePath),
                 //() => downloadAndReplaceScript(releasePath),
 
@@ -77,7 +77,7 @@ function getTestRules(releasePath, width, height) {
                 // ),
                 () => checkStandartTest(releasePath),
                 () => toggleCommentedBorders(releasePath, true),
-                // () => checkLoopLimiter(releasePath, false),
+                () => checkLoopLimiter(releasePath, true),
                 //() => checkFpsInIndexJs(releasePath),
 
                 // Optimize
