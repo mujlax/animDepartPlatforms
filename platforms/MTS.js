@@ -42,8 +42,8 @@ function getTestRules(releasePath, width, height) {
                 //     `<div id="Stage">`
                 // ),
                 () => checkStandartTest(releasePath),
-                // () => toggleCommentedBorders(releasePath, true),
-                // () => checkLoopLimiter(releasePath, false),
+                () => toggleCommentedBorders(releasePath, true),
+                () => checkLoopLimiter(releasePath, false),
                 //() => checkFpsInIndexJs(releasePath),
                 //() => downloadAndReplaceScript(releasePath),
 
@@ -59,7 +59,7 @@ function getTestRules(releasePath, width, height) {
                 //() => inlineJavaScript(releasePath),
                 // () => checkIndexHtmlSize(releasePath, 150),
                 () => archiveFolder(releasePath),
-                // () => checkZipSize(releasePath, 512),
+                () => checkZipSize(releasePath, 150),
 
             ]
         },
@@ -71,13 +71,10 @@ function getTestRules(releasePath, width, height) {
                     '<meta charset="UTF-8">',
                     `<meta name="ad.size" content="width=100%,height=${height}">`
                 ),
-                () => wrapDiv(releasePath,
-                    'animation_container',
-                    `<div id="Stage">`
-                ),
+
                 () => checkStandartTest(releasePath),
-                // () => toggleCommentedBorders(releasePath, false),
-                // () => checkLoopLimiter(releasePath, false),
+                () => toggleCommentedBorders(releasePath, true),
+                () => checkLoopLimiter(releasePath, false),
                 //() => checkFpsInIndexJs(releasePath),
 
                 // Optimize
@@ -92,7 +89,7 @@ function getTestRules(releasePath, width, height) {
                 //() => inlineJavaScript(releasePath),
                 // () => checkIndexHtmlSize(releasePath, 150),
                 () => archiveFolder(releasePath),
-                // () => checkZipSize(releasePath, 512),
+                () => checkZipSize(releasePath, 150),
 
             ]
         }
@@ -116,7 +113,7 @@ function getSupportedSizes(releasePath, width, height) {
 
 
 module.exports = {
-    name: 'MTS_dsp (no test)',
+    name: 'MTS',
     process: async (paths, userLink, platformWindow, platformSettings) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
