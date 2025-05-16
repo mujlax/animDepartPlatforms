@@ -118,7 +118,7 @@ function getSupportedSizes(releasePath, width, height) {
 
 
 module.exports = {
-    name: 'RBC (no test)',
+    name: 'RBC',
     process: async (paths, userLink, platformWindow, platformSettings) => {
         userLink = await checkRequestLink(requestLink = false, userLink, platformWindow);
 
