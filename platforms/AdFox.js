@@ -55,7 +55,7 @@ function getTestRules(releasePath, width, height) {
                     `<a href="%banner.reference_mrc_user1%" target="%banner.target%">`
                 ),
                 () => checkStandartTest(releasePath),
-                () => toggleCommentedBorders(releasePath, false),
+                () => toggleCommentedBorders(releasePath, true),
                 () => checkLoopLimiter(releasePath, false),
                 //() => checkFpsInIndexJs(releasePath),
                 //() => downloadAndReplaceScript(releasePath),
