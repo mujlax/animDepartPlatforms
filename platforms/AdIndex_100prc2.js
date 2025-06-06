@@ -58,7 +58,7 @@ function getTestRules(releasePath, width, height) {
                 () => toggleCommentedBorders(releasePath, true),
                 () => checkLoopLimiter(releasePath, false),
                 //() => checkFpsInIndexJs(releasePath),
-                //() => downloadAndReplaceScript(releasePath),
+                () => downloadAndReplaceScript(releasePath),
 
                 // Optimize
 
@@ -92,7 +92,7 @@ function getTestRules(releasePath, width, height) {
                 () => toggleCommentedBorders(releasePath, true),
                 () => checkLoopLimiter(releasePath, false),
                 //() => checkFpsInIndexJs(releasePath),
-                //() => downloadAndReplaceScript(releasePath),
+                () => downloadAndReplaceScript(releasePath),
 
                 // Optimize
 
